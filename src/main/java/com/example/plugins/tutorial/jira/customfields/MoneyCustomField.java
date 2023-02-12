@@ -10,7 +10,7 @@ import com.atlassian.jira.issue.customfields.impl.FieldValidationException;
 import java.math.BigDecimal;
 
 @Scanned
-public class MoneyCustomField extends AbstractSingleFieldType<BigDecimal>
+public class MoneyCustomField extends AbstractSingleFieldType<BigDecimal> {
         public MoneyCustomField(
                 @JiraImport CustomFieldValuePersister customFieldValuePersister,
                 @JiraImport GenericConfigManager genericConfigManager) {
