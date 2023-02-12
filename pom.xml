@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example.plugins.tutorial.jira</groupId>
     <artifactId>tutorial-jira-custom-field</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <organization>
-        <name>GLaDOS</name>
-        <url>https://www.aperturescience.com/a/b/c/d/g/h/abcdgh/</url>
+        <name>Example Company</name>
+        <url>http://www.example.com/</url>
     </organization>
+
     <name>tutorial-jira-custom-field</name>
-    <description>Money custom field tutorial plugin.</description>
+    <description>This is the com.example.plugins.tutorial.jira:tutorial-jira-custom-field plugin for Atlassian JIRA.</description>
     <packaging>atlassian-plugin</packaging>
+
     <dependencies>
         <dependency>
             <groupId>com.atlassian.jira</groupId>
@@ -35,6 +41,7 @@
             <version>4.10</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>com.atlassian.plugin</groupId>
             <artifactId>atlassian-spring-scanner-annotation</artifactId>
@@ -47,6 +54,7 @@
             <version>1</version>
             <scope>provided</scope>
         </dependency>
+
         <!-- WIRED TEST RUNNER DEPENDENCIES -->
         <dependency>
             <groupId>com.atlassian.plugins</groupId>
@@ -65,6 +73,7 @@
             <artifactId>gson</artifactId>
             <version>2.2.2-atlassian-1</version>
         </dependency>
+
         <!-- Uncomment to use TestKit in your project. Details at https://bitbucket.org/atlassian/jira-testkit -->
         <!-- You can read more about TestKit at https://developer.atlassian.com/display/JIRADEV/Plugin+Tutorial+-+Smarter+integration+testing+with+TestKit -->
         <!--
@@ -75,19 +84,8 @@
             <scope>test</scope>
         </dependency>
         -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.6.6</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.8.5</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -109,14 +107,24 @@
                     </pluginArtifacts>
                     -->
                     <enableQuickReload>true</enableQuickReload>
+
                     <!-- See here for an explanation of default instructions: -->
                     <!-- https://developer.atlassian.com/docs/advanced-topics/configuration-of-instructions-in-atlassian-plugins -->
                     <instructions>
                         <Atlassian-Plugin-Key>${atlassian.plugin.key}</Atlassian-Plugin-Key>
+
                         <!-- Add package to export here -->
-                        <Export-Package>com.example.plugins.tutorial.jira.customfields.api,</Export-Package>
+                        <Export-Package>
+                            com.example.plugins.tutorial.jira.customfields.api,
+                        </Export-Package>
+
                         <!-- Add package import here -->
-                        <Import-Package>org.springframework.osgi.*;resolution:="optional", org.eclipse.gemini.blueprint.*;resolution:="optional", *</Import-Package>
+                        <Import-Package>
+                            org.springframework.osgi.*;resolution:="optional",
+                            org.eclipse.gemini.blueprint.*;resolution:="optional",
+                            *
+                        </Import-Package>
+
                         <!-- Ensure plugin is spring powered -->
                         <Spring-Context>*</Spring-Context>
                     </instructions>
@@ -140,6 +148,7 @@
             </plugin>
         </plugins>
     </build>
+
     <properties>
         <jira.version>7.13.0</jira.version>
         <amps.version>8.1.2</amps.version>
@@ -153,4 +162,5 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
 </project>
