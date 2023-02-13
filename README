@@ -1,11 +1,15 @@
-You have successfully created an Atlassian Plugin!
+Demo Money Custom Field Jira Plugin.
 
-Here are the SDK commands you'll use immediately:
+A working plugin with fixed errors, created following outdated Atlassian tutorial:
+https://developer.atlassian.com/server/jira/platform/creating-a-custom-field-in-jira/
 
-* atlas-run   -- installs this plugin into the product and starts it on localhost
-* atlas-debug -- same as atlas-run, but allows a debugger to attach at port 5005
-* atlas-help  -- prints description for all commands in the SDK
+Some errors which was fixed:
+- Atlassian Spring Scanner usega fully removed, including annotations (e.g. @Scanned, @Overrride) and class imports into package.
+- Dependency org.mockito was added to pom.xml so 'atlas-run' won't throw an error when trying to run tests.
+- #disable_html_escaping() was added to edit.vm
 
 Full documentation is always available at:
 
 https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugin+SDK
+
+(but it's definitely outdated so keep in mind)
