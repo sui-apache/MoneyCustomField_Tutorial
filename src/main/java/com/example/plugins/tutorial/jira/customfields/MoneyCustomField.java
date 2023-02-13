@@ -2,7 +2,6 @@ package com.example.plugins.tutorial.jira.customfields;
 
 import com.atlassian.jira.issue.customfields.impl.AbstractSingleFieldType;
 import com.atlassian.jira.issue.customfields.persistence.PersistenceFieldType;
-import com.atlassian.plugin.spring.scanner.annotation.component.Scanned;
 import com.atlassian.plugin.spring.scanner.annotation.imports.JiraImport;
 import com.atlassian.jira.issue.customfields.manager.GenericConfigManager;
 import com.atlassian.jira.issue.customfields.persistence.CustomFieldValuePersister;
