@@ -4,7 +4,7 @@ A working plugin with fixed errors, created following outdated Atlassian tutoria
 https://developer.atlassian.com/server/jira/platform/creating-a-custom-field-in-jira/
 
 Some errors which was fixed:
-- Atlassian Spring Scanner usega fully removed, including annotations (e.g. @Scanned, @Overrride) and class imports into package.
+- Atlassian Spring Scanner usege fully removed, including annotations (e.g. @Scanned, @Overrride) and class imports into package.
 - Dependency org.mockito was added to pom.xml so 'atlas-run' won't throw an error when trying to run tests.
 - #disable_html_escaping() was added to edit.vm
 
