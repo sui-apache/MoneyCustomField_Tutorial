@@ -1,1 +1,3 @@
-<h1>edit.vm</h1>
+#if ($value)
+    ₴$value
+#end
